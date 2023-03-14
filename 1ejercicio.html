@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var matrix = []
+        var suma     = 0
+        var suma2    = 0
+        var suma3    = 0
+        var suma4    = 0
+        var suma5    = 0
+        var suma6    = 0
+        var mensaje  =""
+    
+        document.write("La matriz es:" + "<br/>")
+    
+        for (i = 0; i <= 2; i++) {
+            suma = 0
+    
+            for (j = 0; j <= 2; j++) {
+                matrix[i, j] = parseInt(prompt("Ingrese los numeros " + i + "," + j))
+                suma = suma + matrix[i, j]
+                if (j == 0) {
+                    suma2 = suma2 + matrix[i, j]
+                }if(j == 1) {
+                    suma3 = suma3 + matrix[i, j]
+                }if(j == 2) {
+                    suma4 = suma4 + matrix[i, j]
+                }if(i == j) {
+                    suma5 = suma5 + matrix[i, j]
+                }if(-i == -j) {
+                    suma6 = suma6 + matrix[i, j]
+                }
+            }
+            document.write(matrix + "<br/> ")
+            mensaje  = mensaje  + "La suma de la fila:    "+i+" es: "+suma+"<br/>"    
+        }
+        document.write(mensaje)
+        document.write("La suma de la columna 1 es: " + suma2 + "<br>") 
+        document.write("La suma de la columna 2 es: " + suma3 + "<br>")
+        document.write("La suma de la columna 3 es: " + suma4 + "<br>")
+        document.write("la suma de la diagonal principal es: " + suma5 + "<br/>")
+        document.write("la suma de la diagonal inversa es: " + suma6)
+    </script>
+</body>
+</html>
